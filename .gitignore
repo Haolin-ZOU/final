@@ -1,11 +1,19 @@
-.Rproj.user
+# OS
+.DS_Store
+
+# R
 .Rhistory
 .RData
 .Ruserdata
-.DS_Store
+
+# direnv
+.direnv/
+.envrc.local
+
+# Python
 __pycache__/
+.pytest_cache/
 *.pyc
-.ipynb_checkpoints/
+
+# Outputs (通常不提交；必要的最终图我们后面再选择性加入)
 output/
-!output/.gitkeep
-result
