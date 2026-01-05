@@ -17,3 +17,5 @@ __pycache__/
 
 # Outputs (通常不提交；必要的最终图我们后面再选择性加入)
 output/
+
+.DS_Store
