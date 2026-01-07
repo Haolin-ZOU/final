@@ -1,21 +1,84 @@
-# OS
+# =========================
+# OS / Editor
+# =========================
 .DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
 
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.ipynb_checkpoints/
+
+# venv (do NOT commit)
+.venv/
+venv/
+ENV/
+.env
+
+# =========================
 # R
+# =========================
 .Rhistory
 .RData
 .Ruserdata
+*.Rout
+*.Rout.*
+.Rproj.user/
+*.Rproj
 
-# direnv
+# =========================
+# Quarto / RMarkdown outputs (optional to ignore)
+# =========================
+*_cache/
+*_files/
+.quarto/
+reports/.quarto/
+reports/_freeze/
+
+# =========================
+# Nix / direnv
+# =========================
 .direnv/
-.envrc.local
+result
+result-*
+*.drv
+.nix-*
 
-# Python
-__pycache__/
-.pytest_cache/
-*.pyc
+# Keep your environment spec tracked
+!default.nix
+!gen-env.R
+!.envrc
 
-# Outputs (通常不提交；必要的最终图我们后面再选择性加入)
+# =========================
+# Pipeline outputs (recommended to NOT commit)
+# =========================
 output/
+# If you want the folder to exist in git, add output/.gitkeep and unignore it:
+!output/.gitkeep
 
-.DS_Store
+# =========================
+# IMPORTANT: keep assignment data tracked
+# =========================
+!data/
+!data/raw/
+!data/raw/*.xlsx
+
+# =========================
+# Stray / accidental artifact (you had this in repo root)
+# =========================
+make_first_differences/
+
